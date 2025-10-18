@@ -1,3 +1,1 @@
-# COMPLETAR  
-Comparando sus conocimientos antes de hacer la práctica con sus conocimientos después de hacer la tarea, explicar los principales aprendizajes logrados para beneficio de su formación profesional.  
-Si solucionó un problema presentado o utilizó otros comandos que no se mencionan al realizar la práctica también se debe documentar.
+Me pareció interesante el poder conectar directamente una carpeta de mi computadora con una carpeta dentro del contenedor, y aprender a guardar lo datos sin importar que se elimine el contenedor. También como darle un nombre al volumen y como dokcer se encarga de guardar los datos en un lugar específico. No tenia conocimiento sobre estas funciones antes, y me paree útil ya que con ello los datos no se perderan y seran persistentes si el contenedor se elimina o falla.
