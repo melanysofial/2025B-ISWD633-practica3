@@ -16,22 +16,31 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 
 ### Crear un contenedor con la imagen nginx:alpine, mapear todos por puertos, para la ruta carpeta host colocar el directorio en donde se encuentra la carpeta html en tu computador y para la ruta carpeta contenedor: /usr/share/nginx/html (esta ruta se obtiene al revisar la documentación de la imagen)
 ![Volúmenes](volumen-host.PNG)
-# COMPLETAR CON EL COMANDO
+
+```
+docker run -d --name nginx -p 8080:80 -v "C:\Users\Sofia\Documents\Sexto semestre\Construccion y Evolucion de Software\nginx\html":/usr/share/nginx/html nginx:alpine
+```
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+
+La pagina con el puerto mapeado de 8080 se presenta mostrando el error 403, ya que la carpeta html está vacía.
+
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+
+Al realizar el volúmen se está usando mi carpeta y no la carpeta del contenedor, por lo que el index.html de nginx ya no se usa.
+
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+
+Se carga el index del template que se descargó ya que esta dentro de la carpeta html.
 
 ### Eliminar el contenedor
-# COMPLETAR CON EL COMANDO
+```
+docker rm -f nginx
+```
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
-
+Se vuelve a mostrar el contenido del template descargado ya que se guardó en la carpeta html de mi computadora (host). Esto demuestra que con el volumen, los datos permanecen incluso si el contenedor se borra.
